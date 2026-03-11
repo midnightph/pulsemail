@@ -31,7 +31,11 @@ public class CampaignService {
             emailMessage.setBody(saved.getBody());
             emailMessage.setCampaignId(saved.getId());
             emailProducer.sendEmail(emailMessage);
+
         });
+
+        saved.setStatus("SENT");
+        campaignRepository.save(saved);
 
         return saved;
     }

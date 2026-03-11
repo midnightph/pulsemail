@@ -17,7 +17,6 @@ public class Campaign {
     @GeneratedValue
     private Long id;
 
-    private String name;
     private String subject;
     private String body;
     @ElementCollection

@@ -28,7 +28,21 @@ public class AuthService {
         userRepository.save(user);
 
         return jwtService.generateToken(email);
+    }
 
+    public String login(String email, String password) {
+
+        User user = userRepository.findByEmail(email);
+
+        if (user == null) {
+            return null;
+        }
+
+        if (!passwordEncoder.matches(password, user.getPassword())) {
+            throw new RuntimeException("Invalid credentials");
+        }
+
+        return jwtService.generateToken(email);
     }
 
 }

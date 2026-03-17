@@ -12,7 +12,6 @@ import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import org.mockito.junit.jupiter.MockitoExtension;
-
 import com.midnight.pulsemail.model.Campaign;
 import com.midnight.pulsemail.model.EmailMessage;
 import com.midnight.pulsemail.queue.EmailProducer;

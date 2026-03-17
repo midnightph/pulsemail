@@ -16,3 +16,6 @@ spring.mail.username=YOUR_MAILTRAP_USERNAME
 spring.mail.password=YOUR_MAILTRAP_PASSWORD
 spring.mail.properties.mail.smtp.auth=true
 spring.mail.properties.mail.smtp.starttls.enable=true
+
+# minimum 256bits
+jwt.secret=
